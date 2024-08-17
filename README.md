@@ -55,3 +55,60 @@ G : 18
 #### License
 
 This code is open for educational and personal use. Feel free to modify and experiment with the implementation.
+
+
+### Kruskal's Algorithm Implementation in Python
+
+#### Overview
+
+This Python script implements Kruskal's algorithm, which is used to find the Minimum Spanning Tree (MST) of a connected, undirected graph. The MST is a subset of the graph's edges that connects all vertices, without any cycles, and with the minimum possible total edge weight.
+
+#### How It Works
+
+1. **Graph Representation**:
+   - The graph is represented as a dictionary where each key is a node, and its value is another dictionary representing the neighboring nodes and the edge weights connecting them.
+
+2. **Kruskal's Algorithm**:
+   - The algorithm works by sorting all graph edges in the non-decreasing order of their weights.
+   - It uses a Disjoint Set (Union-Find) data structure to keep track of which vertices are in which components (or sets).
+   - Starting with the smallest edge, the algorithm adds edges to the MST, ensuring that no cycles are formed. This is done by checking if the two vertices of an edge belong to different components. If they do, the edge is added to the MST, and the components are merged.
+
+3. **Functions**:
+   - **` find(parent, node)`**: Finds the root of the set that the `node` belongs to, with path compression.
+   - **`union(parent, rank, node1, node2)`**: Merges the sets containing `node1` and `node2` using union by rank.
+   - **` Kruskal (graph)`**: A main function that implements Kruskal's algorithm to find the MST. It returns the edges in the MST.
+
+4. **Output**:
+   - The script prints the edges included in the Minimum Spanning Tree (MST) and their weights.
+
+#### Example Graph
+
+The script includes an example graph with nodes 'A' through 'G'. The `kruskal` function processes this graph to produce the MST.
+
+#### Sample Output
+
+The script prints the edges that are part of the MST, showing which nodes are connected and the weight of each connecting edge:
+
+```
+Minimum Spanning Tree using kruskal algorithm:
+('C', 'E', 1)
+('A', 'B', 2)
+('A', 'C', 3)
+('B', 'E', 3)
+('A', 'D', 3)
+('D', 'F', 7)
+```
+
+#### Customization
+
+- **Graph Modification**: You can modify the graph dictionary to test the algorithm on different graph structures.
+
+#### Notes
+
+- The graph should be connected and undirected.
+- Kruskal's algorithm assumes the graph's edges have non-negative weights.
+- The output MST is one of possibly many valid MSTs if the graph has edges with equal weights.
+
+#### License
+
+This code is open for educational and personal use. Feel free to modify and experiment with the implementation.
