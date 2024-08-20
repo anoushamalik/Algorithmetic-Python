@@ -159,3 +159,7 @@ Minimum Spanning Tree:
 ## License
 
 This code is open for educational and personal use. Feel free to modify and experiment with the implementation.
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
