@@ -1,4 +1,4 @@
-#1. Dijkstra's Algorithm Implementation in Python
+# 1. Dijkstra's Algorithm Implementation in Python
 
 ## Overview
 
