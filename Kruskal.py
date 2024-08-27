@@ -1,3 +1,4 @@
+#Kruskal Algorithm
 def find(parent, node):
     if parent[node] == node:
         return node
